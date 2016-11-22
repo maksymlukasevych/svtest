@@ -1,0 +1,105 @@
+
+<div class="container" id="product-section">
+
+  <div class="row">
+
+   <div class="col-md-6 test-col test-col-md-6">
+           <div ng-controller="SliderController" class="slide-thumb">
+
+            <div class="main-img">
+                    <img id="img" ng-src="{{dress.imageUrl}}">
+            </div>
+
+            <ul class="thumb">
+  <li ng-repeat="image in dress.images" class="li-img">
+    <img  ng-src='{{image}}' ng-click="changeImage(image)">
+  </li>
+</ul>
+
+  </div>
+   </div>
+
+<div class="col-md-6 test-sol test-col-md-6">
+  <div class="dress-info-top">
+    <h1>{{dress.name}}</h1>
+    <p>Артикуль: {{dress.article}}</p>
+  </div>
+  <div class="dress-info-price">
+    <div class="price-block-left"><h2>Ціна прокату - {{dress.price}} грн.</h2> </div>
+    <div class="price-block-right">
+<a tabindex="0"  role="button" data-toggle="popover" data-placement="top" data-trigger="focus"  data-content="Після повернення плаття застава віддається">
+  <h2>Ціна застави - {{dress.zastava}} грн.</h2></a>
+      </div>
+
+  </div>
+        <div class="dress-info-icons">
+<div class="icons-left">
+  <ul>
+    <li>
+      <span class="time icon"></span>
+  <span class="icon-text">Працюємо в зручний для Вас час</span>
+    </li>
+        <li>
+       <span class="free-acc icon"></span>
+  <span class="icon-text">Додаються безкоштовні аксесуари</span>
+    </li>
+
+
+
+  </ul>
+  
+
+</div>
+
+<div class="icons-right">
+  <ul>
+    <li>
+       <span class="day icon"></span>
+  <span class="icon-text">Прокат на 3 дні</span>
+    </li>
+    <li>
+      <span class="transfer icon"></span>
+  <span class="icon-text">Доставка по всій Україні</span>
+    </li>
+  </ul>
+
+</div>
+</div>
+
+
+<div class="dress-info-about">
+  <div class="size">
+    <h2><span class="info-h2">Розмір:</span></h2>
+      <span class="sizeblock">{{dress.sizeusa}} ({{dress.sizeeu}})</span>
+      <span class="sizeblock">{{dress.sizeusa2}} ({{dress.sizeeu2}})</span>
+  </div>
+  <h2><span class="info-h2">Кількість:</span> {{dress.number}}</h2>
+  <h2><span class="info-h2">Колір:</span> {{dress.color}}</h2>
+  <h2><span class="info-h2">Довжина:</span> {{dress.height}} см</h2>
+  <h2><span class="info-h2">Матеріал:</span> {{dress.material}}</h2>
+  <h2><span class="info-h2">Опис:</span> {{dress.description}}</h2>
+  
+</div>
+
+</div>
+
+  </div>
+ </div>
+
+
+
+
+
+
+<script>
+$(document).ready(function(){
+    $('[data-toggle="popover"]').popover();
+    $('.popover-dismiss').popover({
+  trigger: 'focus'
+})
+});
+</script>
+
+
+
+

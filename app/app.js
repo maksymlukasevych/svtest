@@ -3,10 +3,12 @@
 // Declare app level module which depends on views, and components
 angular.module('myApp', [
   'ngRoute',
-  'myApp.view1',
-  'myApp.view2',
-  'myApp.version'
+  'angularGrid'
 ]).
-config(['$routeProvider', function($routeProvider) {
-  $routeProvider.otherwise({redirectTo: '/view1'});
+config(['$routeProvider', '$locationProvider', function($routeProvider, $locationProvider) {
+$locationProvider.html5Mode(true);
+  $routeProvider.
+  otherwise({redirectTo: '/'});
 }]);
+
+

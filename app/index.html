@@ -5,37 +5,158 @@
 <!--[if gt IE 8]><!--> <html lang="en" ng-app="myApp" class="no-js"> <!--<![endif]-->
 <head>
   <meta charset="utf-8">
+  <base href="/">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>My AngularJS App</title>
-  <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Свято Напрокат — плаття на прокат для особливих подій.</title>
+  <meta name="description" content="Свято Напрокат — плаття на прокат для особливих подій:
+вечірні, коктейльні, випускні плаття, плаття для дружок, вишиванки, а також безкоштовні аксесуари!">
+  <meta name="keywords" content="плаття на прокат, плаття напрокат, плаття для дружок, вишиванки, вечірні плаття, коктейльні плаття, аксесуари напрокат">
+  <meta name="google-site-verification" content="-XmS5I8djXvD2tdMM9PWUJMfVGJctM8v-OotzMpv_Q4" />
+
+
+
+  <link rel="icon" type="image/png" href="Logo/favicon.ico" />
   <link rel="stylesheet" href="bower_components/html5-boilerplate/dist/css/normalize.css">
   <link rel="stylesheet" href="bower_components/html5-boilerplate/dist/css/main.css">
   <link rel="stylesheet" href="app.css">
-  <script src="bower_components/html5-boilerplate/dist/js/vendor/modernizr-2.8.3.min.js"></script>
-</head>
-<body>
-  <ul class="menu">
-    <li><a href="#/view1">view1</a></li>
-    <li><a href="#/view2">view2</a></li>
-  </ul>
+  <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
+  <link rel="stylesheet" href="navbar/css/reset.css"> 
+  <link rel="stylesheet" href="navbar/css/style.css"> 
+  <link rel="stylesheet" href="app.css">
+  <link href="bower_components/lightbox2/dist/css/lightbox.css" rel="stylesheet">
 
+</head>
+
+<body>
   <!--[if lt IE 7]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
   <![endif]-->
+ <header>
+   <a id="cd-logo" href="/dresses"><img src="navbar/img/logos.svg"  alt="Homepage"></a>
+    <nav id="cd-top-nav">
+      <ul>
+        <li><a href="/dresses">Головна</a></li>
 
-  <div ng-view></div>
+        <li><a href="/contacts">Контакти</a></li>
+      </ul>
+    </nav>
+    <a id="cd-menu-trigger" href="#0"><span class="cd-menu-text">Меню </span><span class="cd-menu-icon"></span></a>
+  </header>
 
-  <div>Angular seed app: v<span app-version></span></div>
+  <main class="cd-main-content">
+ <div ng-view>
+ </div>
+  </main> <!-- cd-main-content -->
+
+  <nav id="cd-lateral-nav">
+    <ul class="cd-navigation">
+      <li class="item-has-children">
+        <a href=""><h1>Плаття</h1></a>
+        <ul class="sub-menu">
+          <li><a href="/bridesmaids"><h2>Для Дружок</h2></a></li>
+          <li><a href="/evening"><h2>Вечірні</h2></a></li>
+          <li><a href="/coctail"><h2>Коктейльні</h2></a></li>
+          <li><a href="/embroidery"><h2>Вишиванки</h2></a></li>
+        </ul>
+      </li> <!-- item-has-children -->
+
+      <li class="item-has-children">
+        <a href="#0"><h1>Аксесуари</h1></a>
+        <ul class="sub-menu">
+          <li><a href="/ties"><h2>Метелики/Краватки</h2></a></li>
+          <li><a href="/wreath"><h2>Віночки</h2></a></li>
+        </ul>
+      </li> <!-- item-has-children -->
+
+      <li class="item-has-children">
+        <a href="#0"><h1>Вишиванки</h1></a>
+        <ul class="sub-menu">
+          <li><a href="/embroidery"><h2>Вишиванки</h2></a></li>
+        </ul>
+      </li> <!-- item-has-children -->
+
+      <li class="item-has-children">
+        <a href="#0"><h1>Кортеж</h1></a>
+        <ul class="sub-menu">
+          <li><a href="/cortege"><h2>Mitsubishi Outlander</h2></a></li>
+        </ul>
+      </li> <!-- item-has-children -->
+      
+    </ul> <!-- cd-navigation -->
+
+    <ul class="cd-navigation cd-single-item-wrapper ">
+      <li><a href="/rules"><h2>Умови Прокату</h2></a></li>
+      <li><a href="/gallery"><h2>Галерея</h2></a></li>
+      <li><a href="/contacts"><h2>Контакти</h2></a></li>
+    </ul> <!-- cd-single-item-wrapper -->
+
+    <ul class="cd-navigation cd-single-item-wrapper">
+      <li><h4>м.Львів, вул. Юрія Липи, 39</h4></li>
+      <li><h4>+380939310477</h4></li>
+      <li><h4>+380987357887 - Христина</h4></li>
+      <li><h4>m.khristina91@gmail.com</h4></li>
+    </ul> <!-- cd-single-item-wrapper -->
+
+    <div class="cd-navigation socials">
+      <a class="cd-google cd-img-replace" href="https://plus.google.com/103444848597001067768" target="_blank">Google Plus</a>
+      <a class="cd-facebook cd-img-replace" href="https://www.facebook.com/profile.php?id=100010738295115s" target="_blank">Facebook</a>
+      <a class="cd-vk cd-img-replace" href="https://vk.com/svyatonaprokat" target="_blank">VK</a>
+      <a class="cd-ins cd-img-replace" href="https://www.instagram.com/svyatonaprokat/" target="_blank">Instagram</a>
+    </div> <!-- socials -->
+     <p class="copyright">
+     &#169 Svyatonaprokat.lviv.ua, 2015-2016
+  </p>
+  </nav>
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-87442903-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
 
   <!-- In production use:
   <script src="//ajax.googleapis.com/ajax/libs/angularjs/x.x.x/angular.min.js"></script>
   -->
+  <script src="bower_components/jquery/dist/jquery.js"></script>
+  <script src="bower_components/lightbox2/dist/js/lightbox.js"></script>
+
+
+
+
+  <script src="navbar/js/main.js"></script>
+  <script src="bower_components/html5-boilerplate/dist/js/vendor/modernizr-2.8.3.min.js"></script>
+  <script src="navbar/js/modernizr.js"></script>
+  <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
   <script src="bower_components/angular/angular.js"></script>
   <script src="bower_components/angular-route/angular-route.js"></script>
+
   <script src="app.js"></script>
-  <script src="view1/view1.js"></script>
-  <script src="view2/view2.js"></script>
+  <script src="services/dressesService.js"></script>
+  <script src="services/imageService.js"></script>
+  <script src="dresspage/slider.js"></script>
+  <script src="dresses/dresses.js"></script>
+  <script src="bridesmaid/bridesmaids.js"></script>
+  <script src="evenings/evening.js"></script>
+  <script src="coctalies/coctail.js"></script>
+  <script src="embroider/embroidery.js"></script>
+  <script src="dresspage/dresspage.js"></script>
+  <script src="tie/ties.js"></script>
+  <script src="tiespage/tiespage.js"></script>
+  <script src="wreathes/wreath.js"></script>
+  <script src="wreathpage/wreathpage.js"></script>
+  <script src="rule/rules.js"></script>
+  <script src="contactu/contacts.js"></script>
+  <script src="galleries/gallery.js"></script>
+  <script src="corteges/cortege.js"></script>
+  <script src="bower_components/angulargrid/angulargrid.js"></script>
   <script src="components/version/version.js"></script>
   <script src="components/version/version-directive.js"></script>
   <script src="components/version/interpolate-filter.js"></script>

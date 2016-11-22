@@ -1,0 +1,11 @@
+<div class="galleryDress">
+  
+ <div class="galleryItem" ng-repeat="dress in dresses" ng-show="dress.ties==1">
+ <a href="/tiespage/{{dress.id}}">
+ 	<img ng-src="{{dress.imageUrl}}"/>
+ </a>
+  <h3>{{dress.price}} грн.</h3>
+ </div>
+
+</div>
+

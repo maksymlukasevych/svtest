@@ -10,6 +10,12 @@
     "angular-route": "~1.4.0",
     "angular-loader": "~1.4.0",
     "angular-mocks": "~1.4.0",
-    "html5-boilerplate": "~5.2.0"
+    "html5-boilerplate": "~5.2.0",
+    "angular-modal-service": "~0.10.1",
+    "masonry": "~4.1.1",
+    "lightbox2": "~2.8.2",
+    "angulargrid": "~0.6.3",
+    "angular-masonry": "~0.16.0",
+    "ng-infinite-scroll": "~0.0.1"
   }
 }

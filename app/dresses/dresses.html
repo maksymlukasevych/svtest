@@ -1,0 +1,11 @@
+<div class="galleryDress">
+  
+ <div class="galleryItem" ng-repeat="dress in dresses" ng-show="dress.material" >
+ <a href="/dresspage/{{dress.id}}">
+ 	<img ng-src="{{dress.imageUrl}}"/>
+ </a>
+ <h3>{{dress.price}} грн.</h3>
+ </div>
+
+</div>
+
